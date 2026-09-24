@@ -22,10 +22,10 @@ function ExternalLinkIcon({ className }: { className?: string }) {
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative py-24 lg:py-32">
+    <section id="projects" className="relative py-24 lg:py-32 overflow-hidden">
       <div className="absolute inset-0 bg-zinc-950" />
       <div className="relative max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 scroll-reveal">
           <span className="inline-block px-3 py-1 text-xs font-semibold tracking-wider uppercase text-emerald-400 border border-emerald-500/20 rounded-full bg-emerald-500/5 mb-4">
             Featured Work
           </span>
@@ -38,8 +38,10 @@ export default function Projects() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {featuredProjects.map((project) => (
-            <ProjectCard key={project.slug} project={project} />
+          {featuredProjects.map((project, i) => (
+            <div key={project.slug} className={`scroll-reveal-delay-${(i % 2) + 1}`}>
+              <ProjectCard project={project} />
+            </div>
           ))}
         </div>
       </div>
@@ -49,7 +51,12 @@ export default function Projects() {
 
 function ProjectCard({ project }: { project: typeof featuredProjects[number] }) {
   return (
-    <div className="group relative rounded-2xl bg-white/[0.02] border border-white/5 overflow-hidden hover:border-emerald-500/20 hover:bg-white/[0.04] transition-all duration-500 hover:-translate-y-1 flex flex-col">
+    <a
+      href={project.github}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group relative rounded-2xl bg-white/[0.02] border border-white/5 overflow-hidden hover:border-emerald-500/20 hover:bg-white/[0.04] transition-all duration-500 hover:-translate-y-1 flex flex-col card-hover"
+    >
       <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
 
       <div className="relative p-6 flex flex-col flex-1">
@@ -73,27 +80,17 @@ function ProjectCard({ project }: { project: typeof featuredProjects[number] }) 
           ))}
         </div>
 
-        <div className="flex flex-wrap gap-2">
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs text-zinc-300 hover:border-emerald-500/30 hover:bg-emerald-500/5 hover:text-white transition-all"
-          >
-            <GithubIcon className="w-3 h-3" /> Source
-          </a>
+        <div className="flex items-center justify-between">
+          <span className="inline-flex items-center gap-1.5 text-xs text-emerald-400 font-medium">
+            <GithubIcon className="w-3 h-3" /> View Source
+          </span>
           {project.live && (
-            <a
-              href={project.live}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-xs text-emerald-400 hover:bg-emerald-500/20 transition-all"
-            >
+            <span className="inline-flex items-center gap-1.5 text-xs text-zinc-500 hover:text-emerald-400 transition-colors">
               <ExternalLinkIcon className="w-3 h-3" /> Live
-            </a>
+            </span>
           )}
         </div>
       </div>
-    </div>
+    </a>
   );
 }

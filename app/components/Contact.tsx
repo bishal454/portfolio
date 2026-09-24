@@ -25,9 +25,9 @@ export default function Contact() {
 
   if (submitted) {
     return (
-      <section id="contact" className="relative py-24 lg:py-32">
+      <section id="contact" className="relative py-24 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-zinc-950 via-black to-zinc-950" />
-        <div className="relative max-w-2xl mx-auto px-6 text-center">
+        <div className="relative max-w-2xl mx-auto px-6 text-center scroll-reveal">
           <div className="p-8 rounded-2xl bg-emerald-500/10 border border-emerald-500/20">
             <Check className="w-12 h-12 text-emerald-400 mx-auto mb-4" />
             <h2 className="text-2xl font-bold text-white mb-2">Message Sent</h2>
@@ -45,9 +45,9 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="relative py-24 lg:py-32">
+    <section id="contact" className="relative py-24 lg:py-32 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-zinc-950 via-black to-zinc-950" />
-      <div className="relative max-w-3xl mx-auto px-6">
+      <div className="relative max-w-3xl mx-auto px-6 scroll-reveal">
         <div className="text-center mb-12">
           <span className="inline-block px-3 py-1 text-xs font-semibold tracking-wider uppercase text-emerald-400 border border-emerald-500/20 rounded-full bg-emerald-500/5 mb-4">
             Get in Touch

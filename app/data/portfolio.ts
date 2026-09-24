@@ -1,12 +1,12 @@
 export const profile = {
   name: "Bishal Ranjan Sah",
-  subtitle: "Full-Stack Engineer · AI & Systems Builder",
+  subtitle: "Software Engineer · AI & Systems Builder",
   location: "MNNIT Allahabad, India",
   email: "bishalranjan44@gmail.com",
   github: "https://github.com/bishal454",
   linkedin: "https://www.linkedin.com/in/sah-bishal-ranjan/",
   image: "/images/Bishal-Ranjan-Sah.jpg",
-  bio: "Full-stack engineer at Savatronic Healthcare Technologies. Building AI-powered systems — from agentic sports analysis platforms to real-time text-to-speech applications with Next.js, tRPC, and Vertex AI.",
+  bio: "Building full-stack systems and intelligent applications. Currently working on agentic AI platforms and real-time web applications with Next.js, tRPC, and Vertex AI.",
 } as const;
 
 export const techStack = {
@@ -37,6 +37,24 @@ export const featuredProjects = [
     github: "https://github.com/bishal454/PlaySphere",
     live: "https://aiplaysphere.vercel.app",
     highlight: "Agentic AI · Sports Platform",
+  },
+  {
+    name: "OneClick",
+    slug: "oneclick",
+    description:
+      "An online food ordering platform built with TypeScript and Next.js. A complete food delivery experience with ordering, cart management, and checkout.",
+    problem:
+      "Food ordering should be seamless and intuitive. Users need a straightforward way to browse menus, add items to cart, and complete orders quickly.",
+    tech: ["TypeScript", "Next.js", "JavaScript"],
+    features: [
+      "Full food ordering workflow",
+      "TypeScript-powered frontend",
+      "Next.js App Router architecture",
+      "Cart and checkout flow",
+    ],
+    github: "https://github.com/bishal454/OneClick",
+    live: null,
+    highlight: "Food Ordering · TypeScript",
   },
   {
     name: "Resonix",
@@ -104,11 +122,6 @@ export const achievements = [
     source: "IEEE",
   },
   {
-    title: "DPIIT Recognised Startup",
-    description: "Savatronic Healthcare Technologies — DIPP276994",
-    source: "Government of India",
-  },
-  {
     title: "Pull Shark",
     description: "GitHub achievement earned for collaborative contributions",
     source: "GitHub",
@@ -117,26 +130,6 @@ export const achievements = [
     title: "Quickdraw",
     description: "GitHub achievement for quick contributions",
     source: "GitHub",
-  },
-  {
-    title: "Indian Patent",
-    description: "AI-Powered Smart Walker (Patent No: 202631046336)",
-    source: "Indian Patent Office",
-  },
-  {
-    title: "AIC IIT Delhi Incubation",
-    description: "Incubated at AIC IIT Delhi Innovation Foundation",
-    source: "AIC IIT Delhi",
-  },
-] as const;
-
-export const experience = [
-  {
-    title: "Full-Stack Engineer",
-    company: "Savatronic Healthcare Technologies",
-    period: "Current",
-    description:
-      "Building AI-powered full-stack systems including agentic sports analysis platforms, text-to-speech applications, and workflow automation. Focused on backend architecture, distributed systems, and scalable products with Next.js, tRPC, Prisma, and Vertex AI.",
   },
 ] as const;
 
@@ -150,11 +143,8 @@ export const education = [
 ] as const;
 
 export const navLinks = [
-  { label: "Home", href: "#hero" },
-  { label: "About", href: "#about" },
-  { label: "Tech Stack", href: "#tech" },
-  { label: "Projects", href: "#projects" },
-  { label: "Achievements", href: "#achievements" },
-  { label: "Education", href: "#education" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Projects", href: "/projects" },
+  { label: "Contact", href: "/contact" },
 ] as const;

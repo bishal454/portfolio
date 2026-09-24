@@ -20,10 +20,11 @@ export default function TechStack() {
   };
 
   return (
-    <section id="tech" className="relative py-24 lg:py-32">
+    <section id="tech" className="relative py-24 lg:py-32 overflow-hidden">
       <div className="absolute inset-0 bg-zinc-950" />
+      <div className="absolute top-1/3 left-0 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
       <div className="relative max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 scroll-reveal">
           <span className="inline-block px-3 py-1 text-xs font-semibold tracking-wider uppercase text-emerald-400 border border-emerald-500/20 rounded-full bg-emerald-500/5 mb-4">
             Technologies
           </span>
@@ -36,16 +37,17 @@ export default function TechStack() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {categories.map((cat) => (
-            <div key={cat.label} className="group">
+          {categories.map((cat, i) => (
+            <div key={cat.label} className={`group scroll-reveal-delay-${(i % 3) + 1}`}>
               <h3 className={`text-xs font-bold uppercase tracking-wider mb-3 ${colorMap[cat.label]}`}>
                 {cat.label}
               </h3>
               <div className="flex flex-wrap gap-2">
-                {cat.items.map((item) => (
+                {cat.items.map((item, j) => (
                   <span
                     key={item}
-                    className="px-3 py-1.5 rounded-lg text-sm font-medium bg-white/5 border border-white/5 text-zinc-300 hover:border-emerald-500/30 hover:bg-emerald-500/5 hover:text-white transition-all cursor-default"
+                    className="px-3 py-1.5 rounded-lg text-sm font-medium bg-white/5 border border-white/5 text-zinc-300 hover:border-emerald-500/30 hover:bg-emerald-500/5 hover:text-white transition-all cursor-default card-hover"
+                    style={{ animationDelay: `${(i * 3 + j) * 0.05}s` }}
                   >
                     {item}
                   </span>

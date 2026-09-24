@@ -16,29 +16,29 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center py-24 lg:py-32">
         <div className="space-y-8">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-emerald-500/20 bg-emerald-500/5 text-emerald-400 text-sm font-medium">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-emerald-500/20 bg-emerald-500/5 text-emerald-400 text-sm font-medium animate-fade-in-up">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
             Available for opportunities
           </div>
 
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-[1.05]">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-[1.05] animate-fade-in-up">
             <span className="block">Bishal Ranjan</span>
-            <span className="block bg-gradient-to-r from-emerald-400 via-teal-400 to-blue-400 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-emerald-400 via-teal-400 to-blue-400 bg-clip-text text-transparent gradient-text">
               Sah
             </span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-zinc-300 leading-relaxed max-w-lg">
+          <p className="text-lg sm:text-xl text-zinc-300 leading-relaxed max-w-lg animate-fade-in-up">
             {profile.subtitle}
           </p>
 
-          <p className="text-base text-zinc-400 leading-relaxed max-w-md">
+          <p className="text-base text-zinc-400 leading-relaxed max-w-md animate-fade-in-up">
             {profile.bio}
           </p>
 
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-4 animate-fade-in-up">
             <a
-              href="#projects"
+              href="/projects"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-medium transition-all hover:shadow-lg hover:shadow-emerald-500/20"
             >
               View Projects <ArrowRight className="w-4 h-4" />
@@ -62,7 +62,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="hidden lg:flex items-center justify-center">
+        <div className="hidden lg:flex items-center justify-center animate-float">
           <div className="relative">
             <div className="w-72 h-72 sm:w-80 sm:h-80 rounded-full overflow-hidden border-2 border-emerald-500/20 shadow-2xl shadow-emerald-500/10">
               <Image
