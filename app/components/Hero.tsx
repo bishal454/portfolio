@@ -79,12 +79,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-zinc-600 text-xs">
-        <span>Scroll</span>
-        <div className="w-5 h-8 rounded-full border border-zinc-600 flex items-start justify-center p-1">
-          <div className="w-1 h-2 rounded-full bg-zinc-600 animate-bounce" />
-        </div>
-      </div>
+
     </section>
   );
 }
